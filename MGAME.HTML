@@ -1,0 +1,224 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emoji Reaction Game</title>
+    <style>
+        #emojiContainer {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            width: 500px;
+            margin: 0 auto;
+        }
+        .emoji {
+            font-size: 40px;
+            padding: 20px;
+            border: 2px solid #ccc;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .emoji:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <h1>Look at the Reaction</h1>
+    <div id="emojiContainer">
+        <span class="emoji" data-default="😊" data-hover="😃">😊</span>
+        <span class="emoji" data-default="😢" data-hover="😭">😢</span>
+        <span class="emoji" data-default="😡" data-hover="😠">😡</span>
+        <span class="emoji" data-default="😍" data-hover="😘">😍</span>
+        <span class="emoji" data-default="😎" data-hover="😏">😎</span>
+        <span class="emoji" data-default="😜" data-hover="😝">😜</span>
+        <span class="emoji" data-default="🤔" data-hover="🤨">🤔</span>
+        <span class="emoji" data-default="😇" data-hover="😈">😇</span>
+        <span class="emoji" data-default="🤗" data-hover="🤩">🤗</span>
+        <span class="emoji" data-default="😴" data-hover="🥱">😴</span>
+        <span class="emoji" data-default="🤐" data-hover="😬">🤐</span>
+        <span class="emoji" data-default="😷" data-hover="🤒">😷</span>
+        <span class="emoji" data-default="🤢" data-hover="🤮">🤢</span>
+        <span class="emoji" data-default="🤯" data-hover="😵">🤯</span>
+        <span class="emoji" data-default="🤠" data-hover="😈">🤠</span>
+        <span class="emoji" data-default="😇" data-hover="😈">😇</span>
+        <span class="emoji" data-default="🥳" data-hover="🤪">🥳</span>
+        <span class="emoji" data-default="😐" data-hover="😑">😐</span>
+        <span class="emoji" data-default="😶" data-hover="🙄">😶</span>
+        <span class="emoji" data-default="😏" data-hover="😒">😏</span>
+        <span class="emoji" data-default="🙃" data-hover="😕">🙃</span>
+        <span class="emoji" data-default="🤤" data-hover="😮">🤤</span>
+        <span class="emoji" data-default="😭" data-hover="😩">😭</span>
+        <span class="emoji" data-default="😬" data-hover="😲">😬</span>
+        <span class="emoji" data-default="😱" data-hover="😨">😱</span>
+    </div>
+
+    <script>
+       
+        const emojis = document.querySelectorAll('.emoji');
+
+        
+        function changeEmoji(event) {
+            const emoji = event.target;
+            emoji.textContent = emoji.getAttribute('data-hover');
+        }
+
+        
+        function revertEmoji(event) {
+            const emoji = event.target;
+            emoji.textContent = emoji.getAttribute('data-default');
+        }
+
+        
+        emojis.forEach(emoji => {
+            emoji.addEventListener('mouseover', changeEmoji);
+            emoji.addEventListener('mouseout', revertEmoji);
+        });
+    </script>
+</body>
+</html>
+
+ -->
+
+
+
+
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Emoji Reaction Game</title>
+     <style>
+         body {
+             font-family: 'Arial', sans-serif;
+             background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+             margin: 0;
+             padding: 0;
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             justify-content: center;
+             height: 100vh;
+             text-align: center;
+             color: #333;
+         }
+ 
+         h1 {
+             font-size: 2.5rem;
+             font-weight: bold;
+             margin-bottom: 30px;
+             text-align: center;
+             background: #ffffff90;
+             padding: 10px 20px;
+             border-radius: 15px;
+             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+         }
+ 
+         #emojiContainer {
+             display: grid;
+             grid-template-columns: repeat(5, 1fr);
+             gap: 15px;
+             width: 80%;
+             max-width: 700px;
+             margin: 0 auto;
+             background: #ffffffa0;
+             padding: 20px;
+             border-radius: 15px;
+             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+         }
+ 
+         .emoji {
+             font-size: 2rem;
+             padding: 20px;
+             border: 2px solid #ffebcd;
+             background-color: #ffefd5;
+             text-align: center;
+             cursor: pointer;
+             transition: transform 0.3s, background-color 0.3s;
+             border-radius: 10px;
+             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+         }
+ 
+         .emoji:hover {
+             transform: scale(1.2);
+             background-color: #fff7e6;
+         }
+ 
+         @media (max-width: 768px) {
+             #emojiContainer {
+                 grid-template-columns: repeat(3, 1fr);
+             }
+         }
+ 
+         @media (max-width: 480px) {
+             #emojiContainer {
+                 grid-template-columns: repeat(2, 1fr);
+             }
+ 
+             .emoji {
+                 font-size: 1.5rem;
+                 padding: 15px;
+             }
+         }
+     </style>
+ </head>
+ <body>
+     <h1>Look at the Reaction!</h1>
+     <div id="emojiContainer">
+         <!-- Emoji elements -->
+         <span class="emoji" data-default="😊" data-hover="😃">😊</span>
+         <span class="emoji" data-default="😢" data-hover="😭">😢</span>
+         <span class="emoji" data-default="😡" data-hover="😠">😡</span>
+         <span class="emoji" data-default="😍" data-hover="😘">😍</span>
+         <span class="emoji" data-default="😎" data-hover="😏">😎</span>
+         <span class="emoji" data-default="😜" data-hover="😝">😜</span>
+         <span class="emoji" data-default="🤔" data-hover="🤨">🤔</span>
+         <span class="emoji" data-default="😇" data-hover="😈">😇</span>
+         <span class="emoji" data-default="🤗" data-hover="🤩">🤗</span>
+         <span class="emoji" data-default="😴" data-hover="🥱">😴</span>
+         <span class="emoji" data-default="🤐" data-hover="😬">🤐</span>
+         <span class="emoji" data-default="😷" data-hover="🤒">😷</span>
+         <span class="emoji" data-default="🤢" data-hover="🤮">🤢</span>
+         <span class="emoji" data-default="🤯" data-hover="😵">🤯</span>
+         <span class="emoji" data-default="🤠" data-hover="😈">🤠</span>
+         <span class="emoji" data-default="😇" data-hover="😈">😇</span>
+         <span class="emoji" data-default="🥳" data-hover="🤪">🥳</span>
+         <span class="emoji" data-default="😐" data-hover="😑">😐</span>
+         <span class="emoji" data-default="😶" data-hover="🙄">😶</span>
+         <span class="emoji" data-default="😏" data-hover="😒">😏</span>
+         <span class="emoji" data-default="🙃" data-hover="😕">🙃</span>
+         <span class="emoji" data-default="🤤" data-hover="😮">🤤</span>
+         <span class="emoji" data-default="😭" data-hover="😩">😭</span>
+         <span class="emoji" data-default="😬" data-hover="😲">😬</span>
+         <span class="emoji" data-default="😱" data-hover="😨">😱</span>
+     </div>
+ 
+     <script>
+         const emojis = document.querySelectorAll('.emoji');
+ 
+         function changeEmoji(event) {
+             const emoji = event.target;
+             emoji.textContent = emoji.getAttribute('data-hover');
+         }
+ 
+         function revertEmoji(event) {
+             const emoji = event.target;
+             emoji.textContent = emoji.getAttribute('data-default');
+         }
+ 
+         emojis.forEach(emoji => {
+             emoji.addEventListener('mouseover', changeEmoji);
+             emoji.addEventListener('mouseout', revertEmoji);
+         });
+     </script>
+ </body>
+ </html>
+ 
+
+
+
+ 
